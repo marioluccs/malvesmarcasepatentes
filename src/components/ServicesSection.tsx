@@ -1,10 +1,12 @@
 
 import { Check } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Registro de Marcas",
+      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=500&h=300",
       description: "Proteção da identidade visual do seu negócio, incluindo nome, logo e slogan.",
       features: [
         "Pesquisa prévia no banco de dados do INPI",
@@ -15,6 +17,7 @@ const ServicesSection = () => {
     },
     {
       title: "Registro de Patentes",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&h=300",
       description: "Proteção de invenções, modelos de utilidade e desenhos industriais.",
       features: [
         "Análise de patenteabilidade",
@@ -25,6 +28,7 @@ const ServicesSection = () => {
     },
     {
       title: "Consultoria Jurídica",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&h=300",
       description: "Orientação especializada em propriedade intelectual.",
       features: [
         "Análise de viabilidade de registros",
@@ -35,6 +39,7 @@ const ServicesSection = () => {
     },
     {
       title: "Monitoramento e Defesa",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=500&h=300",
       description: "Proteção contínua de seus direitos de propriedade intelectual.",
       features: [
         "Vigilância de novas solicitações semelhantes",
@@ -56,6 +61,15 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {services.map((service, index) => (
             <div key={index} className="card h-full">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <AspectRatio ratio={5/3} className="bg-gray-100">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                  />
+                </AspectRatio>
+              </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
               

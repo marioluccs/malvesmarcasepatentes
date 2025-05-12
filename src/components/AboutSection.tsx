@@ -1,5 +1,6 @@
 
 import { Briefcase, Shield, Check } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const AboutSection = () => {
   return (
@@ -50,7 +51,7 @@ const AboutSection = () => {
         
         <div className="mt-16 p-6 md:p-10 bg-malves-gray rounded-lg">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-3/4 mb-6 md:mb-0 md:pr-8">
+            <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
               <h3 className="text-2xl font-bold mb-4">Compromisso com sua marca</h3>
               <p className="text-gray-600 mb-4">
                 Na Malves Registro de Marcas e Patentes, a proteção do seu patrimônio intelectual é nossa prioridade.
@@ -61,9 +62,15 @@ const AboutSection = () => {
                 Atuamos em todas as etapas, desde a pesquisa inicial até a defesa de sua marca contra possíveis oposições.
               </p>
             </div>
-            <div className="w-full md:w-1/4 flex justify-center">
-              <div className="h-32 w-32 bg-malves-blue rounded-full flex items-center justify-center">
-                <Shield className="h-16 w-16 text-white" />
+            <div className="w-full md:w-1/2">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <AspectRatio ratio={16/9} className="bg-gray-100">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=450" 
+                    alt="Profissionais trabalhando na proteção de marcas" 
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                  />
+                </AspectRatio>
               </div>
             </div>
           </div>

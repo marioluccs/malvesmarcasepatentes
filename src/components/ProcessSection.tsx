@@ -1,5 +1,6 @@
 
 import { Search, FileText, Shield, Check, Briefcase } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ProcessSection = () => {
   const steps = [
@@ -36,6 +37,16 @@ const ProcessSection = () => {
         <h2 className="section-title">Como funciona o processo no INPI?</h2>
         <div className="section-subtitle">
           O registro de marcas e patentes no Brasil é feito através do INPI – Instituto Nacional da Propriedade Industrial.
+        </div>
+        
+        <div className="mb-16 rounded-lg overflow-hidden">
+          <AspectRatio ratio={21/9} className="bg-gray-100">
+            <img 
+              src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1200&h=514" 
+              alt="Processo de registro de marcas e patentes" 
+              className="object-cover w-full h-full"
+            />
+          </AspectRatio>
         </div>
         
         <div className="mt-16 relative">
